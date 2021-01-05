@@ -1,0 +1,12 @@
+<h1>Searching: <small>{{ text }}</small></h1>
+<hr>
+<div *ngIf="heroes.length == 0" class="row animated fadeIn fast">
+    <div class="col-md-12">
+        <div class="alert alert-info" role="alert">
+            No results for the term {{ text }}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-card-hero *ngFor="let hero of heroes" [hero]="hero" [id]="hero.idx"></app-card-hero>
+</div>
